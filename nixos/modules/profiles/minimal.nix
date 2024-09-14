@@ -21,6 +21,8 @@ with lib;
 
   environment.stub-ld.enable = false;
 
+  fonts.fontconfig.enable = false;
+
   # The lessopen package pulls in Perl.
   programs.less.lessopen = mkDefault null;
 
@@ -28,6 +30,8 @@ with lib;
   boot.enableContainers = mkDefault false;
 
   programs.command-not-found.enable = mkDefault false;
+
+  programs.ssh.setXAuthLocation = false;
 
   services.logrotate.enable = mkDefault false;
 
